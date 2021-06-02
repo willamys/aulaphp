@@ -4,7 +4,7 @@
 //Se recebemos dados por POST para serem inseridos
     if (isset($_GET['codigo'])) {
 //Inserir dados com Prepared Statements
-        if(!($_GET['codigo'] == "")){
+        if($_GET['codigo'] != ""){
             //criar objeto passando o nome e idade
             excluir($_GET['codigo']);
             
