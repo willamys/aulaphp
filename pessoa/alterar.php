@@ -8,11 +8,14 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+    $codigo = $_GET['codigo'];
+    $codigoSafe = htmlspecialchars($codigo);?>
     <h1>Alterar Pessoa:</h1>
     <!--Formulário de entrada de dados-->
     <form name="inserir" action="alterar.pessoa.php" method="post">
-        <input type="hidden" name="codigo" value="<?php echo $_GET['codigo'];?>">    
-        <?php $pessoa = listarPorCodigo($_GET['codigo']);?>
+        <input type="hidden" name="codigo" value="<?php echo $codigoSafe;?>">    
+        <?php $pessoa = listarPorCodigo($codigoSafe);?>
         Nome: <input type="text" name="nome" value="<?php echo $pessoa->getNome();?>">
         Idade: <input type="text" name="idade" value="<?php echo $pessoa->getIdade();?>">
         <input type="submit" value="Inserir">
