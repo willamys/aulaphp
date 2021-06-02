@@ -7,7 +7,6 @@ class Pessoa{
     function __construct($nome, $idade){
         $this->setNome($nome);
         $this->setIdade($idade);
-       // echo "Pessoa criada com sucesso";
     }
     public function getNome(){
         return $this->nome;
