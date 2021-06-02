@@ -3,7 +3,7 @@
 
 function connectar(){
 	try {
-		$pw = 'constantinopla'; //senha
+		$pw = ''; //senha
 		$user = 'root';//usuário
 		$bd ='alunox'; //banco de dados
 		$cbd = new PDO('mysql:host=localhost;dbname='.$bd, $user, $pw);
